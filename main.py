@@ -2,6 +2,7 @@ import http.client
 import json
 import os
 from dotenv import load_dotenv, find_dotenv
+from matplotlib import pyplot as pp
 
 
 if __name__ == '__main__':
@@ -9,7 +10,6 @@ if __name__ == '__main__':
     conn = http.client.HTTPSConnection("meteostat.p.rapidapi.com")
 
     headers = {
-        #place to .env
         'X-RapidAPI-Key': os.environ.get("X-RapidAPI-Key"),
         'X-RapidAPI-Host': "meteostat.p.rapidapi.com"
     }
@@ -22,10 +22,13 @@ if __name__ == '__main__':
     print(json_data)
     tavg = []
     tmin = []
-    for i in range(0,31):
+    for i in range(0, 31):
         tavg.append(json_data['data'][i]['tavg'])
         tmin.append(json_data['data'][i]['tmin'])
     print(tavg)
     print(tmin)
     print(min(tmin))
+    pp.plot(tavg)
+    pp.savefig("tavg.png")
+    pp.show()
 
