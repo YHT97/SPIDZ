@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Inter, sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6, p {
+        margin-block: 0;
+        padding-block: 0;
+    }
+    .line {
+        margin-top: 50px;
+        width: 100%;
+        height: 1px;
+        background-color: #c4c4c4;
+    }
+    .hero {
+        padding-top: 50px;
+    }
+    .container {
+        max-width: 1240px;
+        margin: 0 auto;
+    }
+    .title {
+        font-size: 48px;
+        text-align: center;
+        letter-spacing: .4em;
+    }
+    .content {
+        padding-top: 50px
+    }
+    .choose {
+        display: flex;
+        align-items: center;
+        gap: 20px
+    }
+    .input {
+        width: 200px;
+        border-radius: 5px;
+        padding: 10px
+    }
+    .text {
+        font-size: 18px;
+        letter-spacing: .2em;
+    }
+    .button {
+        padding: 13px;
+        background-color: #c4c4c4;
+        border: none;
+        border-radius: 5px;
+        letter-spacing: .2em;
+    }
+    .wrapper-content {
+        display: flex;
+        align-items: center;
+        gap: 5px
+    }
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .minimal {
+        font-size: 18px;
+        letter-spacing: .2em;
+    }
+    .minimal-number {
+        font-size: 18px;
+        letter-spacing: .2em;
+        text-decoration: underline;
+        margin-right: -.2em;
+        text-underline-offset: 5px;
+    }
+    .img-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<body>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="title">Welcome</h1>
+                <div class="line"></div>
+                <div class="content">
+                    <!--<label class="choose">
+                        <p class="text">Выберите дату</p>
+                        <input class="input" type="date">
+                        <button class="button" type="submit">Подтвердить</button>
+                    </label>
+                    <div class="line"></div>-->
+                    <div class="wrapper">
+                        <div class="wrapper-content">
+                            <p class="minimal">Минимальная температура за месяц: </p>
+                            <p class="minimal-number">{{tmin}}°</p>
+                        </div>
+                        <div class="wrapper-content">
+                            <p class="minimal">Средняя температура за месяц: </p>
+                            <p class="minimal-number">{{tavg}}°</p>
+                        </div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="tavg.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
